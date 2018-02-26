@@ -38,7 +38,6 @@ function ehc_enqueue_styles() {
 		CHILD_LIB . '/assets/less/core/base.less',
 		CHILD_LIB . '/assets/less/core/overlay.less',
 		CHILD_LIB . '/assets/less/core/variables.less',
-		CHILD_LIB . '/assets/less/layout/social.less',
 		CHILD_LIB . '/assets/less/layout/default.less',
 		CHILD_LIB . '/assets/less/layout/content.less',
 		CHILD_LIB . '/assets/less/layout/header.less',
@@ -97,5 +96,5 @@ add_action( 'wp_enqueue_scripts', 'ehc_add_google_fonts' );
  * @return void
  */
 function ehc_add_google_fonts() {
-	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,400i|Playfair+Display+SC:400,700', false );
+	wp_enqueue_style( 'pp-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600|Raleway:400,400i', false );
 }

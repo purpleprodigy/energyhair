@@ -2,7 +2,7 @@
 // ========================================================================
 @base-body-background:                           @global-background;
 
-@base-body-font-family: 						'Open Sans', Helvetica, Arial, sans-serif;
+@base-body-font-family: 						'Raleway', sans-serif;
 @base-body-font-weight:                         400;
 @base-body-font-size:                           @global-font-size;
 @base-body-line-height:                         @global-line-height;
@@ -18,8 +18,8 @@
 
 @base-margin-vertical:                          @global-margin;
 
-@base-heading-font-family:                      'Playfair Display SC', serif;
-@base-heading-font-weight:                      700;
+@base-heading-font-family:                      'Montserrat', sans-serif;
+@base-heading-font-weight:                      600;
 @base-heading-color:                            @global-color;
 @base-heading-margin-top:                       @global-margin-large;
 @base-h1-font-size:                             round((@global-font-size * 2.6)); // 36px / 42px
@@ -65,7 +65,9 @@
 
 .hook-base-link() {}
 
-.hook-base-link-hover() {}
+.hook-base-link-hover() {
+    color: @yellow;
+}
 
 
 // Text-level semantics

@@ -12,6 +12,9 @@ function ehc_set_up_post_structure() {
 	// Remove the post meta.
 	beans_remove_action( 'beans_post_meta' );
 
+	// Align post image to the right.
+	beans_add_attribute( 'beans_post_image', 'class', 'uk-float-right uk-margin-top-remove uk-margin-right uk-margin-bottom' );
+
 	// Comments styling.
 	beans_remove_attribute( 'beans_comments', 'class', 'uk-panel-box' );
 	beans_add_attribute( 'beans_comment_form_wrap', 'class', 'uk-panel-box' );

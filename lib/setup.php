@@ -26,8 +26,17 @@ function ehc_add_new_image_sizes() {
 			'height' => 400,
 			'crop'   => true,
 		),
+		'home-widget' => array(
+			'width'  => 480,
+			'height' => 480,
+			'crop'   => true,
+		),
+		'slideshow' => array(
+			'width'  => 1144,
+			'height' => 763,
+			'crop'   => true,
+		),
 	);
-
 	foreach ( $config as $name => $args ) {
 		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
 

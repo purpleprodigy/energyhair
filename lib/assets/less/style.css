@@ -8,7 +8,7 @@
  */
 html {
   /* 1 */
-  font: 400 16px / 1.5 'Open Sans', Helvetica, Arial, sans-serif;
+  font: 400 16px / 1.5 'Raleway', sans-serif;
   /* 2 */
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -50,6 +50,7 @@ a:hover,
 .uk-link:hover {
   color: #004d00;
   text-decoration: none;
+  color: #d8bb8f;
 }
 /* Text-level semantics
  ========================================================================== */
@@ -226,8 +227,8 @@ h4,
 h5,
 h6 {
   margin: 0 0 25px 0;
-  font-family: 'Playfair Display SC', serif;
-  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   color: #444;
   text-transform: none;
   color: green;
@@ -1836,7 +1837,7 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-side ul a:hover {
-  color: #2D3047;
+  color: #2B2C2D;
 }
 /* Modifier `uk-nav-dropdown`
  ========================================================================== */
@@ -1878,7 +1879,7 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-dropdown ul a:hover {
-  color: #2D3047;
+  color: #d8bb8f;
 }
 /* Modifier `uk-nav-navbar`
  ========================================================================== */
@@ -1919,7 +1920,7 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-navbar ul a:hover {
-  color: #2D3047;
+  color: #2B2C2D;
 }
 /* Modifier `uk-nav-offcanvas`
  ========================================================================== */
@@ -2023,7 +2024,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 2 */
   color: #444;
   font-size: 16px;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: normal;
 }
 /* Appear not as link */
@@ -2400,7 +2401,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  * Links
  */
 .uk-pagination > li > a {
-  background: #2D3047;
+  background: #2B2C2D;
   color: #fff;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
@@ -3233,7 +3234,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Playfair Display SC', serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -3784,9 +3785,9 @@ select.uk-form-width-mini {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  background: #eee;
+  background: green;
   line-height: 35px;
-  color: #444;
+  color: #2B2C2D;
   font-size: 18px;
   text-align: center;
 }
@@ -3797,8 +3798,8 @@ select.uk-form-width-mini {
  */
 .uk-icon-button:hover,
 .uk-icon-button:focus {
-  background-color: #f5f5f5;
-  color: #444;
+  background-color: #2B2C2D;
+  color: green;
   /* 2 */
   outline: none;
 }
@@ -7613,7 +7614,7 @@ a.uk-thumbnail:focus {
   /* 4 */
   background: rgba(0, 0, 0, 0.1);
   font-weight: 300;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -7660,7 +7661,7 @@ a.uk-thumbnail:focus {
   /* 2 */
   width: 270px;
   max-width: 100%;
-  background: #2D3047;
+  background: #2B2C2D;
   /* 3 */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -8807,7 +8808,7 @@ a.uk-thumbnail:focus {
   color: #fff;
 }
 .uk-contrast .uk-icon-button {
-  background: #fff;
+  background: green;
   color: #444;
 }
 .uk-contrast .uk-icon-button:hover,
@@ -9373,7 +9374,7 @@ input[type="button"] {
   background-color: green;
   color: #fff;
   border: none;
-  font-family: 'Playfair Display SC', serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   color: #fff !important;
   font-weight: 300 !important;
   cursor: pointer;
@@ -9512,6 +9513,10 @@ input[type="button"]:hover {
  */
 .uk-dotnav-vertical > * {
   float: none;
+}
+.uk-nav-offcanvas > li > a,
+.uk-nav-offcanvas ul a {
+  color: #d8bb8f;
 }
 /* ========================================================================
 Component: Slidenav
@@ -9891,7 +9896,7 @@ input {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Playfair Display SC', serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 16px;
 }
 /*
@@ -10419,7 +10424,7 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-side ul a:hover {
-  color: #2D3047;
+  color: #2B2C2D;
 }
 /* Modifier `uk-nav-dropdown`
  ========================================================================== */
@@ -10461,7 +10466,8 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-dropdown ul a:hover {
-  color: #2D3047;
+  color: #d8bb8f;
+  text-decoration: underline;
 }
 /* Modifier `uk-nav-navbar`
  ========================================================================== */
@@ -10502,7 +10508,7 @@ ul.uk-nav-sub {
   color: green;
 }
 .uk-nav-navbar ul a:hover {
-  color: #2D3047;
+  color: #2B2C2D;
 }
 /* Modifier `uk-nav-offcanvas`
  ========================================================================== */
@@ -10565,7 +10571,7 @@ Header nav
   color: #444;
   font-size: 14px;
   text-transform: uppercase;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .tm-header .uk-navbar-nav > li > a:hover,
 .pp-primary-nav .uk-navbar-nav > li > a:hover {
@@ -10581,7 +10587,7 @@ Header nav
 }
 .tm-header .sub-menu > li > a,
 .pp-primary-nav .sub-menu > li > a {
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
   letter-spacing: 1px;
   font-size: 12px;
 }
@@ -10592,9 +10598,6 @@ Header nav
   background: #fff;
   padding: 15px 0;
   text-transform: uppercase;
-}
-.social-menu {
-  padding-top: 20px;
 }
 /*--------------------------------------------------------------
 Site
@@ -10618,7 +10621,7 @@ a {
 Header
 --------------------------------------------------------------*/
 .tm-header {
-  background: #fff;
+  background: #2B2C2D;
   padding: 15px;
 }
 .tm-header.uk-active {
@@ -10638,7 +10641,7 @@ Header
   font-weight: 400;
   color: #444;
   text-transform: uppercase;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'Montserrat', sans-serif;
   border-bottom: 1px solid green;
   font-size: 20px;
   letter-spacing: 2px;
@@ -10648,7 +10651,7 @@ Header
 /*------------------------------------------------------------*/
 .above-header-widget {
   padding-top: 10px;
-  background: #2D3047;
+  background: #2B2C2D;
   text-align: right;
 }
 @media (min-width: 768px) {
@@ -10658,7 +10661,7 @@ Header
 }
 .above-header-widget .tm-widget {
   color: #fff;
-  font-family: 'Playfair Display SC', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 .above-header-widget .tm-widget p {
@@ -10682,7 +10685,7 @@ Header
   transition: all 0.4s ease-in-out;
 }
 .above-header-widget .tm-widget .uk-icon-button:hover {
-  background: #4b5076;
+  background: #505254;
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
@@ -10698,6 +10701,10 @@ Header
   float: right;
   text-align: right;
   line-height: 1.8;
+}
+.header-right-widget .uk-panel-box {
+  background: #2B2C2D;
+  color: #fff;
 }
 .header-right-widget .uk-icon-phone,
 .header-right-widget .uk-icon-map-marker {
@@ -10764,7 +10771,7 @@ article > .tm-article-image:first-child {
 footer
 --------------------------------------------------------------*/
 .tm-footer {
-  background: #232537;
+  background: #1f1f20;
   color: #fff;
   padding: 25px;
   border-top: none;
@@ -10780,7 +10787,7 @@ footer
   transition: all 0.4s ease-in-out;
 }
 .tm-footer .uk-icon-button:hover {
-  background: #4b5076;
+  background: #505254;
   -webkit-transform: rotateZ(360deg);
   -moz-transform: rotateZ(360deg);
   -ms-transform: rotateZ(360deg);
@@ -10791,10 +10798,10 @@ footer
   margin-left: 3px;
 }
 .tm-footer-widgets {
-  background: #2D3047;
+  background: #2B2C2D;
 }
 .tm-footer-widgets .tm-widget {
-  background: #2D3047;
+  background: #2B2C2D;
   color: #ededed;
 }
 .tm-footer-widgets .tm-widget .uk-panel-title {

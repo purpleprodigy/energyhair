@@ -23,7 +23,7 @@
 @nav-dropdown-divider-border:                   @light-grey;
 @nav-dropdown-divider-border-width:             1px;
 @nav-dropdown-nested-color:                     @primary-color;
-@nav-dropdown-nested-hover-color:               @secondary-color;
+@nav-dropdown-nested-hover-color:               @yellow;
 
 @nav-navbar-color:                              @dark-grey;
 @nav-navbar-hover-background:                   @primary-color;
@@ -246,7 +246,10 @@ ul.uk-nav-sub {
  */
 
 .uk-nav-dropdown ul a { color: @nav-dropdown-nested-color; }
-.uk-nav-dropdown ul a:hover { color: @nav-dropdown-nested-hover-color; }
+.uk-nav-dropdown ul a:hover {
+    color: @nav-dropdown-nested-hover-color;
+    text-decoration: underline;
+}
 
 
 /* Modifier `uk-nav-navbar`
@@ -414,7 +417,7 @@ Header nav
         color: @global-color;
         font-size: @nav-header-font-size;
         text-transform: uppercase;
-        font-family: @base-body-font-family;
+        font-family: @base-heading-font-family;
         &:hover{
             color:@primary-color;
         }
