@@ -43,3 +43,13 @@ function ehc_add_new_image_sizes() {
 		add_image_size( $name, $args['width'], $args['height'], $crop );
 	}
 }
+
+add_filter( 'beans_edit_post_image_args', 'ehc_post_image_edit_args' );
+
+function ehc_post_image_edit_args( $args ) {
+
+	return array_merge( $args, array(
+		'resize' => array( 400, 300, true ),
+	) );
+
+}

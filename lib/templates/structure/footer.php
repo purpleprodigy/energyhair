@@ -26,10 +26,10 @@ function ehc_set_up_footer_structure() {
 		} ?>
         <div class="tm-content uk-container uk-container-center uk-grid uk-grid-match"
              data-uk-grid-match="{target:'.uk-panel'}">
-            <div class="uk-width-large-1-3 uk-width-medium-1-3 uk-width-small-1-1">
+            <div class="uk-width-large-1-3 uk-width-medium-1-3 uk-width-small-1-1 uk-panel">
 				<?php echo beans_widget_area( 'footer-widget-1' ); ?>
             </div>
-            <div class="uk-width-large-1-3 uk-width-medium-1-3 uk-width-small-1-1">
+            <div class="uk-width-large-1-3 uk-width-medium-1-3 uk-width-small-1-1 uk-panel">
 				<?php echo beans_widget_area( 'footer-widget-2' ); ?>
             </div>
             <div class="uk-width-large-1-3 uk-width-medium-1-3 uk-width-small-1-1 uk-panel">

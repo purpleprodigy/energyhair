@@ -52,4 +52,15 @@ function ehc_display_home_widgets() {
 	<?php
 }
 
+// Add the pre footer custom static content.
+add_action( 'beans_footer_before_markup', 'pp_view_pre_footer_content' );
+
+function pp_view_pre_footer_content() {
+	?>
+    <div class="uk-block">
+        Some fullwidth custom content before footer.
+    </div>
+	<?php
+}
+
 beans_load_document();

@@ -37,6 +37,7 @@ function ehc_enqueue_styles() {
 	beans_compiler_add_fragment( 'uikit', array(
 		CHILD_LIB . '/assets/less/core/base.less',
 		CHILD_LIB . '/assets/less/core/overlay.less',
+		CHILD_LIB . '/assets/less/core/utility.less',
 		CHILD_LIB . '/assets/less/core/variables.less',
 		CHILD_LIB . '/assets/less/layout/default.less',
 		CHILD_LIB . '/assets/less/layout/content.less',
@@ -45,6 +46,7 @@ function ehc_enqueue_styles() {
 		CHILD_LIB . '/assets/less/layout/pages.less',
 		CHILD_LIB . '/assets/less/layout/widgets.less',
 		CHILD_LIB . '/assets/less/utilities/mixins.less',
+		CHILD_LIB . '/assets/less/plugins/facebook-feed.less',
 
 	), 'less' );
 }
@@ -71,7 +73,8 @@ function ehc_enqueue_uikit_assets() {
 		'overlay',
 		'column',
 		'switcher',
-		'scrollspy'
+		'scrollspy',
+		'description-list'
 	) );
 	beans_uikit_enqueue_components( array(
 		'sticky',

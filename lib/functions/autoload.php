@@ -13,7 +13,7 @@ function ehc_load_nonadmin_files() {
 		'functions/enqueue-assets.php',
 		'functions/helper-functions.php',
 		'functions/register-widgets.php',
-		'functions/social.php',
+		'functions/favicon.php',
 		'templates/structure/archive.php',
 		'templates/structure/header.php',
 		'templates/structure/post.php',

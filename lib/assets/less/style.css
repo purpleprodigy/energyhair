@@ -2867,7 +2867,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
     overflow: hidden;
   }
   .uk-description-list-horizontal > dt {
-    width: 160px;
+    width: 300px;
     float: left;
     clear: both;
     overflow: hidden;
@@ -2875,7 +2875,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
     white-space: nowrap;
   }
   .uk-description-list-horizontal > dd {
-    margin-left: 180px;
+    margin-left: 320px;
   }
 }
 /* Modifier: `uk-description-list-line`
@@ -2886,10 +2886,10 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-description-list-line > dt:nth-child(n+2) {
   margin-top: 5px;
   padding-top: 5px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #2B2C2D;
 }
 .uk-description-list-line > dd {
-  color: #999;
+  color: #444;
 }
 /* ========================================================================
    Component: Table
@@ -9249,6 +9249,9 @@ a.uk-thumbnail:focus {
 .uk-overlay-toggle.uk-hover .uk-overlay-caption {
   opacity: 1;
 }
+.tm-content.uk-container.uk-container-center.uk-grid.uk-grid-match {
+  padding: 0;
+}
 .tm-overlay-layla .uk-overlay > .uk-overlay-panel {
   padding: 25px;
 }
@@ -9513,6 +9516,41 @@ input[type="button"]:hover {
  */
 .uk-dotnav-vertical > * {
   float: none;
+}
+/* ========================================================================
+   Component: Description list
+ ========================================================================== */
+/* Modifier: `uk-description-list-horizontal`
+ ========================================================================== */
+/* Tablet and bigger */
+@media (min-width: 768px) {
+  .uk-description-list-horizontal {
+    overflow: hidden;
+  }
+  .uk-description-list-horizontal > dt {
+    width: 300px;
+    float: left;
+    clear: both;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .uk-description-list-horizontal > dd {
+    margin-left: 320px;
+  }
+}
+/* Modifier: `uk-description-list-line`
+ ========================================================================== */
+.uk-description-list-line > dt {
+  font-weight: normal;
+}
+.uk-description-list-line > dt:nth-child(n+2) {
+  margin-top: 5px;
+  padding-top: 5px;
+  border-top: 1px solid #2B2C2D;
+}
+.uk-description-list-line > dd {
+  color: #444;
 }
 .uk-nav-offcanvas > li > a,
 .uk-nav-offcanvas ul a {
@@ -10807,5 +10845,18 @@ footer
 .tm-footer-widgets .tm-widget .uk-panel-title {
   text-transform: uppercase;
   color: green;
+}
+.cff-wrapper {
+  margin: 0;
+  padding: 0;
+}
+#cff {
+  padding-top: 0 !important;
+}
+h3.facebook {
+  margin-bottom: 0;
+}
+#cff .cff-item {
+  border-bottom: none !important;
 }
 /*# sourceMappingURL=style.css.map */
