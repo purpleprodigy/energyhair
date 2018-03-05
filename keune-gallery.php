@@ -3,6 +3,9 @@
 Template Name: Keune Gallery
 */
 
+//Remove featured image
+beans_remove_action( 'beans_post_image' );
+
 add_action( 'beans_post_body', 'ehc_keune_gallery' );
 /**
  * Add slideshow to the Keune Gallery page using a category of 'keune-gallery'.
@@ -21,5 +24,7 @@ function ehc_keune_gallery() {
 
 	include_once CHILD_THEME_DIR . '/views/keune-gallery.php';
 }
+
+
 
 beans_load_document();

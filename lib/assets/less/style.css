@@ -314,7 +314,7 @@ hr {
   /* 2 */
   margin: 25px 0;
   border: 0;
-  border-top: 1px solid #ededed;
+  border-top: 1px solid green;
 }
 /* Address
  ========================================================================== */
@@ -10696,7 +10696,7 @@ Header
 }
 .tm-header.uk-active {
   background: #fff;
-  border-bottom: 1px solid #ededed;
+  border-bottom: 1px solid green;
 }
 .tm-header.uk-active .tm-site-branding a {
   color: #444;
@@ -10846,11 +10846,14 @@ article > .tm-article-image:first-child {
   -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
+.ehc-pre-footer-area {
+  margin: 10px 0 40px;
+  padding: 80px 0;
+}
 /*--------------------------------------------------------------
 footer
 --------------------------------------------------------------*/
 .tm-footer {
-  background: #1f1f20;
   color: #fff;
   padding: 25px;
   border-top: none;
@@ -10886,6 +10889,10 @@ footer
 .tm-footer-widgets .tm-widget .uk-panel-title {
   text-transform: uppercase;
   color: green;
+}
+.tm-footer-wrapper.beans_footer_wrapper {
+  background: #2B2C2D;
+  padding: 40px 0;
 }
 .cff-wrapper {
   margin: 0;

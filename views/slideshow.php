@@ -21,7 +21,7 @@
                             <h2 class="uk-article-title" itemprop="headline"><a href="<?php the_permalink(); ?>"
                                                                                 title="<?php esc_html( the_title() ); ?>"><?php the_title(); ?></a>
                             </h2>
-                            <a class="uk-button uk-button-primary" href="<?php the_permalink(); ?>">Read More</a>
+                            <a class="uk-button uk-button-primary" href="<?php the_permalink(); ?>">Find Out More</a>
                         </div>
                     </div>
                 </li>

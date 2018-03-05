@@ -2,7 +2,7 @@
     <div class="uk-slider-container">
         <div class="fade-left"></div>
         <div class="fade-right"></div>
-        <ul class="uk-slider  uk-grid-medium uk-grid-width-large-1-2 uk-slider-fullscreen">
+        <ul class="uk-slider uk-slider-fullscreen uk-grid uk-grid-medium uk-grid-width-large-1-2">
 			<?php if ( $query->have_posts() ) : ?>
 				<?php while ( $query->have_posts() ) : $query->the_post();
 					$thumb_id        = get_post_thumbnail_id();

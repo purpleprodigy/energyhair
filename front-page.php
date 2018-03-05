@@ -14,12 +14,7 @@ if ( $ehc_slideshow_enabled ) {
 	 * @return void
 	 */
 	function ehc_home_slider_section() {
-		$query = new WP_Query( array(
-			'category_name'  => 'slideshow',
-			'paged'          => get_query_var( 'paged' ),
-			'nopaging'       => false,
-			'posts_per_page' => 5
-		) );
+		$query = new WP_Query( array( 'post_type' => 'page', 'post__in' => array( 38, 7, 28, 36, 5 ) ) );
 
 		include_once CHILD_THEME_DIR . '/views/slideshow.php';
 	}
@@ -28,7 +23,7 @@ if ( $ehc_slideshow_enabled ) {
 //Home Widgets
 beans_add_smart_action( 'beans_fixed_wrap[_main]_append_markup', 'ehc_display_home_widgets' );
 /**
- * Display the 3 footer widgets.
+ * Display the home widgets.
  *
  * @since 1.0.0
  *
@@ -52,7 +47,6 @@ function ehc_display_home_widgets() {
 	<?php
 }
 
-// Add the pre footer custom static content.
 add_action( 'beans_footer_before_markup', 'pp_view_pre_footer_content' );
 /**
  * Add area for before the footer content.
@@ -62,11 +56,7 @@ add_action( 'beans_footer_before_markup', 'pp_view_pre_footer_content' );
  * @return void
  */
 function pp_view_pre_footer_content() {
-	?>
-    <div class="uk-block">
-        Some fullwidth custom content before footer.
-    </div>
-	<?php
+	include_once CHILD_THEME_DIR . '/views/pre-footer.php';
 }
 
 beans_load_document();

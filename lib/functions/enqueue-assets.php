@@ -62,8 +62,7 @@ beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'ehc_enqueue_uikit_assets
 function ehc_enqueue_uikit_assets() {
 	beans_compiler_add_fragment( 'uikit', array(
 		CHILD_JS . 'animatedtext.js',
-		CHILD_JS . 'theme.js',
-		CHILD_JS . 'slider.js',
+		CHILD_JS . 'theme.js'
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(
@@ -83,7 +82,6 @@ function ehc_enqueue_uikit_assets() {
 		'slider',
 		'lightbox',
 		'grid',
-		'parallax',
 		'dotnav',
 		'slidenav'
 	),
