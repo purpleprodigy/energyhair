@@ -11,7 +11,6 @@ add_action( 'wp', 'ehc_set_up_archive_structure' );
 function ehc_set_up_archive_structure() {
 
 	if( is_archive() ) {
-
 		beans_modify_action_callback('beans_post_content','ehc_modify_beans_post_content');
 		/**
 		 * Replace the content with an excerpt and the more link.
@@ -26,7 +25,6 @@ function ehc_set_up_archive_structure() {
 				'class'    => 'tm-article-content',
 				'itemprop' => 'text',
 			) );
-
 			the_excerpt();
 			echo beans_post_more_link( );
 
@@ -36,6 +34,21 @@ function ehc_set_up_archive_structure() {
 				echo '-->' . "\n";
 			}
 			beans_close_markup_e( 'beans_post_content', 'div' );
+		}
+		add_filter( 'beans_edit_post_image_args', 'ehc_resize_archive_feature_images' );
+		/**
+		 * Resize the feature images on the archive pages.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param $args
+		 *
+		 * @return array
+		 */
+		function ehc_resize_archive_feature_images( $args ) {
+			return array_merge( $args, array(
+				'resize' => array( 300 , 300, true ),
+			) );
 		}
 	}
 }
@@ -60,7 +73,7 @@ add_filter( 'excerpt_length', 'ehc_modify_excerpt_length' );
  * @return int (Maybe) modified excerpt length.
  */
 function ehc_modify_excerpt_length($length){
-	return 90;
+	return 110;
 }
 
 add_filter( 'excerpt_more', 'ehc_modify_excerpt_more' );

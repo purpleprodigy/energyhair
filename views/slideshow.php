@@ -6,14 +6,14 @@
 				$thumb_id        = get_post_thumbnail_id();
 				$thumb_url_array = wp_get_attachment_image_src( $thumb_id, 'full', true );
 				$resized_src     = beans_edit_image( $thumb_url_array[0], array(
-					'resize' => array( 1144, 763, true )
+					'resize' => array( 1130, 753, true )
 				) );
 				?>
                 <li style="animation-duration: 100ms; height: 300px;">
                     <div class="slider-image">
                         <a href="<?php the_permalink(); ?>" rel="bookmark"
                            title="<?php esc_html( get_the_title() ); ?>">
-                            <picture><img src="<?php echo $resized_src; ?>"></picture>
+                            <picture><img width="1130px" height="753" src="<?php echo $resized_src; ?>" alt="<?php esc_html( the_title() ); ?>"></picture>
                         </a>
                     </div>
                     <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-overlay-bottom uk-flex uk-flex-bottom uk-flex-middle">

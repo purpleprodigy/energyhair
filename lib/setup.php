@@ -36,6 +36,11 @@ function ehc_add_new_image_sizes() {
 			'height' => 763,
 			'crop'   => true,
 		),
+		'gallery' => array(
+			'width'  => 500,
+			'height' => 750,
+			'crop'   => true,
+		),
 	);
 	foreach ( $config as $name => $args ) {
 		$crop = array_key_exists( 'crop', $args ) ? $args['crop'] : false;
@@ -44,12 +49,18 @@ function ehc_add_new_image_sizes() {
 	}
 }
 
-add_filter( 'beans_edit_post_image_args', 'ehc_post_image_edit_args' );
-
-function ehc_post_image_edit_args( $args ) {
-
+add_filter( 'beans_edit_post_image_args', 'ehc_resize_feature_image' );
+/**
+ * Resize the feature images.
+ *
+ * @since 1.0.0
+ *
+ * @param $args
+ *
+ * @return array
+ */
+function ehc_resize_feature_image( $args ) {
 	return array_merge( $args, array(
-		'resize' => array( 400, 300, true ),
+		'resize' => array( 400, 400, true ),
 	) );
-
 }

@@ -18,7 +18,7 @@ if ( $ehc_slideshow_enabled ) {
 			'category_name'  => 'slideshow',
 			'paged'          => get_query_var( 'paged' ),
 			'nopaging'       => false,
-			'posts_per_page' => 3
+			'posts_per_page' => 5
 		) );
 
 		include_once CHILD_THEME_DIR . '/views/slideshow.php';
@@ -54,7 +54,13 @@ function ehc_display_home_widgets() {
 
 // Add the pre footer custom static content.
 add_action( 'beans_footer_before_markup', 'pp_view_pre_footer_content' );
-
+/**
+ * Add area for before the footer content.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function pp_view_pre_footer_content() {
 	?>
     <div class="uk-block">

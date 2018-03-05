@@ -1558,7 +1558,7 @@ iframe {
  * Vertical gutter for articles
  */
 .uk-article + .uk-article {
-  margin-top: 40px;
+  margin-top: 25px;
 }
 /* Sub-object `uk-article-title`
  ========================================================================== */
@@ -10157,68 +10157,6 @@ input {
   height: 40px;
 }
 /* ========================================================================
-   Component: Article
- ========================================================================== */
-/*
- * Micro clearfix to make articles more robust
- */
-.uk-article:before,
-.uk-article:after {
-  content: "";
-  display: table;
-}
-.uk-article:after {
-  clear: both;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-article > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Vertical gutter for articles
- */
-.uk-article + .uk-article {
-  margin-top: 40px;
-}
-/* Sub-object `uk-article-title`
- ========================================================================== */
-.uk-article-title {
-  font-size: 36px;
-  line-height: 42px;
-  font-weight: normal;
-  text-transform: none;
-}
-.uk-article-title a {
-  color: inherit;
-  text-decoration: none;
-}
-/* Sub-object `uk-article-meta`
- ========================================================================== */
-.uk-article-meta {
-  font-size: 12px;
-  line-height: 18px;
-  color: #999;
-}
-/* Sub-object `uk-article-lead`
- ========================================================================== */
-.uk-article-lead {
-  color: #444;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: normal;
-}
-/* Sub-object `uk-article-divider`
- ========================================================================== */
-.uk-article-divider {
-  margin-bottom: 25px;
-  border-color: #ddd;
-}
-* + .uk-article-divider {
-  margin-top: 25px;
-}
-/* ========================================================================
    Component: Comment
  ========================================================================== */
 .uk-comment {
@@ -10637,6 +10575,100 @@ Header nav
   padding: 15px 0;
   text-transform: uppercase;
 }
+li.uk-slide-before,
+li.uk-slide-after {
+  opacity: 0.5;
+}
+/* ========================================================================
+   Component: Table
+ ========================================================================== */
+/*
+ * 1. Remove most spacing between table cells.
+ * 2. Block element behavior
+ * 3. Style
+ */
+.uk-table {
+  /* 1 */
+  border-collapse: collapse;
+  border-spacing: 0;
+  /* 2 */
+  width: 100%;
+  /* 3 */
+  margin-bottom: 15px;
+}
+/*
+ * Add margin if adjacent element
+ */
+* + .uk-table {
+  margin-top: 15px;
+}
+.uk-table th,
+.uk-table td {
+  padding: 8px 8px;
+}
+/*
+ * Set alignment
+ */
+.uk-table th {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.uk-table td {
+  vertical-align: top;
+}
+.uk-table thead th {
+  vertical-align: bottom;
+}
+/*
+ * Caption and footer
+ */
+.uk-table caption,
+.uk-table tfoot {
+  font-size: 12px;
+  font-style: italic;
+}
+.uk-table caption {
+  text-align: left;
+  color: #999;
+}
+/*
+ * Active State
+ */
+.uk-table tbody tr.uk-active {
+  background: #EEE;
+}
+/* Sub-modifier: `uk-table-middle`
+ ========================================================================== */
+.uk-table-middle,
+.uk-table-middle td {
+  vertical-align: middle !important;
+}
+/* Modifier: `uk-table-striped`
+ ========================================================================== */
+.uk-table-striped tbody tr:nth-of-type(odd) {
+  background: #f5f5f5;
+}
+/* Modifier: `uk-table-condensed`
+ ========================================================================== */
+.uk-table-condensed td {
+  padding: 4px 8px;
+}
+/* Modifier: `uk-table-hover`
+ ========================================================================== */
+.uk-table-hover tbody tr:hover {
+  background: #EEE;
+}
+.pricing img {
+  margin-top: 45px;
+}
+@media (max-width: 960px) {
+  .pricing img {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
 /*--------------------------------------------------------------
 Site
 --------------------------------------------------------------*/
@@ -10755,7 +10787,7 @@ Header
 content
 --------------------------------------------------------------*/
 .tm-main {
-  background: #000;
+  background: #2B2C2D;
 }
 .tm-primary .uk-article,
 .tm-secondary .tm-widget {
@@ -10789,6 +10821,15 @@ article > .tm-article-image:first-child {
     margin-top: -40px;
     margin-left: -40px;
     margin-right: -40px;
+  }
+}
+.tm-article-image {
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .tm-article-image {
+    width: 100%;
+    float: none;
   }
 }
 /*-----------------------------------------------------------

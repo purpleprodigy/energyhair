@@ -31,22 +31,22 @@ function ehc_enqueue_dev_styles() {
 
 function ehc_enqueue_styles() {
 //	Enqueue custom UIkit styles and overwrite with the theme folder.
-	beans_uikit_enqueue_theme( 'beans_child', CHILD_LIB . '/assets/less/theme' );
+	beans_uikit_enqueue_theme( 'beans_child', CHILD_LIB . 'assets/less/theme' );
 
 // Enqueue LESS files to the UIkit compiler.
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/assets/less/core/base.less',
-		CHILD_LIB . '/assets/less/core/overlay.less',
-		CHILD_LIB . '/assets/less/core/utility.less',
-		CHILD_LIB . '/assets/less/core/variables.less',
-		CHILD_LIB . '/assets/less/layout/default.less',
-		CHILD_LIB . '/assets/less/layout/content.less',
-		CHILD_LIB . '/assets/less/layout/header.less',
-		CHILD_LIB . '/assets/less/layout/footer.less',
-		CHILD_LIB . '/assets/less/layout/pages.less',
-		CHILD_LIB . '/assets/less/layout/widgets.less',
-		CHILD_LIB . '/assets/less/utilities/mixins.less',
-		CHILD_LIB . '/assets/less/plugins/facebook-feed.less',
+		CHILD_LIB . 'assets/less/core/base.less',
+		CHILD_LIB . 'assets/less/core/overlay.less',
+		CHILD_LIB . 'assets/less/core/utility.less',
+		CHILD_LIB . 'assets/less/core/variables.less',
+		CHILD_LIB . 'assets/less/layout/default.less',
+		CHILD_LIB . 'assets/less/layout/content.less',
+		CHILD_LIB . 'assets/less/layout/header.less',
+		CHILD_LIB . 'assets/less/layout/footer.less',
+		CHILD_LIB . 'assets/less/layout/pages.less',
+		CHILD_LIB . 'assets/less/layout/widgets.less',
+		CHILD_LIB . 'assets/less/utilities/mixins.less',
+		CHILD_LIB . 'assets/less/plugins/facebook-feed.less',
 
 	), 'less' );
 }
@@ -61,8 +61,9 @@ beans_add_smart_action( 'beans_uikit_enqueue_scripts', 'ehc_enqueue_uikit_assets
  */
 function ehc_enqueue_uikit_assets() {
 	beans_compiler_add_fragment( 'uikit', array(
-		CHILD_LIB . '/assets/js/animatedtext.js',
-		CHILD_LIB . '/assets/js/theme.js'
+		CHILD_JS . 'animatedtext.js',
+		CHILD_JS . 'theme.js',
+		CHILD_JS . 'slider.js',
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(

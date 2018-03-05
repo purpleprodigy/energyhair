@@ -1,7 +1,8 @@
 <?php
 
 //* Add Custom Favicon
-function pp_add_custom_favicon() {?>
+function pp_add_custom_favicon() {
+    ?>
 	<link rel="apple-touch-icon" sizes="152x152" href="<?php echo CHILD_IMG ?>apple-touch-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="<?php echo CHILD_IMG ?>apple-touch-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="<?php echo CHILD_IMG ?>apple-touch-icon-120x120.png">
@@ -10,7 +11,6 @@ function pp_add_custom_favicon() {?>
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo CHILD_IMG ?>apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo CHILD_IMG ?>apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" href="<?php echo CHILD_IMG ?>apple-touch-icon.png">
-	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory() ?>/favicon.ico">
 	<?php
 }
 add_action( 'wp_head', 'pp_add_custom_favicon' );
