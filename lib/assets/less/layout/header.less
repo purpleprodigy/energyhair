@@ -34,51 +34,8 @@ Header
 }
 
 /*-----------------------------------------------------------
-	Above Header Widget
+	Header Right Widget
 /*------------------------------------------------------------*/
-
-.above-header-widget {
-  padding-top: 10px;
-  @media (min-width: @breakpoint-medium) {
-    display: block;
-  }
-  background: @dark-grey;
-  text-align: right;
-
-  .tm-widget {
-    color: @white;
-    font-family: @base-heading-font-family;
-    font-weight: 300;
-
-    p {
-      margin: 0;
-      line-height: 1;
-
-    }
-    .uk-icon-button {
-      float: right;
-      margin-right: 5px;
-      margin-left: 12px;
-      width: 28px;
-      height: 28px;
-      font-size: 16px;
-      line-height: 24px;
-      background: @primary-color;
-      color: @white;
-      .transition;
-      &:hover {
-        background: lighten(@secondary-color, 15%);
-        .transform(rotateZ(360deg));
-      }
-    }
-  }
-  a {
-    color: @white;
-    &:hover {
-      color: @primary-color;
-    }
-  }
-}
 
 .header-right-widget {
   float: right;
@@ -93,5 +50,10 @@ Header
     font-size: 22px;
     position: relative;
     top:1px;
+  }
+  @media (max-width: @breakpoint-medium) {
+    width: 100%;
+    float: none;
+    text-align: center;
   }
 }

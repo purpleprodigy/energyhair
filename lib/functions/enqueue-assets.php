@@ -1,26 +1,6 @@
 <?php
 
-$css_dev_mode_enabled = (bool) get_option( 'css_dev_mode', false );
-
-//Development CSS
-if ( $css_dev_mode_enabled ) {
-	add_action( 'wp_enqueue_scripts', 'ehc_enqueue_dev_styles' );
-} else {
-//Production CSS, autocompile
-	add_action( 'beans_uikit_enqueue_scripts', 'ehc_enqueue_styles', 5 );
-}
-/**
- * Enqueue styles when in Development CSS mode so we can view sourcemaps.
- *
- * @since 1.0.0
- *
- * @return void
- */
-
-function ehc_enqueue_dev_styles() {
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/lib/assets/less/style.css' );
-}
-
+add_action( 'beans_uikit_enqueue_scripts', 'ehc_enqueue_styles', 5 );
 /**
  * Enqueue styles in production using Beans Compiler API.
  *
@@ -43,8 +23,6 @@ function ehc_enqueue_styles() {
 		CHILD_LIB . 'assets/less/layout/content.less',
 		CHILD_LIB . 'assets/less/layout/header.less',
 		CHILD_LIB . 'assets/less/layout/footer.less',
-		CHILD_LIB . 'assets/less/layout/pages.less',
-		CHILD_LIB . 'assets/less/layout/widgets.less',
 		CHILD_LIB . 'assets/less/utilities/mixins.less',
 		CHILD_LIB . 'assets/less/plugins/facebook-feed.less',
 		CHILD_LIB . 'assets/less/plugins/feature-a-page.less',
@@ -67,29 +45,19 @@ function ehc_enqueue_uikit_assets() {
 	), 'js' );
 
 	beans_uikit_enqueue_components( array(
-		'contrast',
-		'cover',
-		'animation',
 		'modal',
 		'overlay',
-		'column',
-		'switcher',
-		'scrollspy',
 		'description-list'
 	) );
 	beans_uikit_enqueue_components( array(
-		'sticky',
 		'slideshow',
 		'slider',
-		'lightbox',
 		'grid',
-		'dotnav',
 		'slidenav'
 	),
 		'add-ons' );
 }
 
-// Google fonts
 add_action( 'wp_enqueue_scripts', 'ehc_add_google_fonts' );
 /**
  * Enqueue Google fonts.

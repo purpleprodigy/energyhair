@@ -1,39 +1,3 @@
-// Name:            Navbar
-// Description:     Defines styles for the navigation bar
-//
-// Component:       `uk-navbar`
-//
-// Sub-objects:     `uk-navbar-nav`
-//                  `uk-navbar-nav-subtitle`
-//                  `uk-navbar-content`
-//                  `uk-navbar-brand`
-//                  `uk-navbar-toggle`
-//                  `uk-navbar-toggle-alt`
-//                  `uk-navbar-center`
-//                  `uk-navbar-flip`
-//
-// Modifiers:       `uk-navbar-attached`
-//
-// States:          `uk-active`
-//                  `uk-parent`
-//                  `uk-open`
-//
-// Used by:         Dropdown
-//
-// Markup:
-//
-// <!-- uk-navbar -->
-// <nav class="uk-navbar">
-//     <ul class="uk-navbar-nav">
-//         <li class="uk-active"><a href=""></a></li>
-//         <li><a href=""></a></li>
-//     </ul>
-// </nav>
-//
-
-// Variables
-// ========================================================================
-
 @navbar-background:                             transparent;
 @navbar-color:                                  lighten(@dark-grey, 15%);;
 @navbar-link-color:                             #07D;
@@ -64,36 +28,3 @@
 @navbar-toggle-hover-color:                     @global-color;
 @navbar-toggle-icon:                            "\f0c9";
 @navbar-toggle-icon-alt:                        "\f002";
-
-
-// Component
-// ========================================================================
-
-.hook-navbar() {}
-
-
-// Sub-object: `uk-navbar-nav`
-// ========================================================================
-
-.hook-navbar-nav() {}
-
-// Hover
-.hook-navbar-nav-hover() {}
-
-// OnClick
-.hook-navbar-nav-onclick() {}
-
-// Active
-.hook-navbar-nav-active() {}
-
-
-// Sub-object: `uk-navbar-content`
-// ========================================================================
-
-.hook-navbar-content() {}
-
-
-// Miscellaneous
-// ========================================================================
-
-.hook-navbar-misc() {}
