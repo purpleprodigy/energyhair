@@ -11,12 +11,6 @@ add_action( 'widgets_init', 'ehc_register_widget_areas' );
 function ehc_register_widget_areas() {
 	$widgets_areas = array(
 		array(
-			'name'        => __( 'Above Header', CHILD_TEXT_DOMAIN ),
-			'id'          => 'above-header-widget',
-			'beans_type'  => 'grid',
-			'description' => __( 'This is the widget area for above the header.', CHILD_TEXT_DOMAIN )
-		),
-		array(
 			'name'        => __( 'Header Right', CHILD_TEXT_DOMAIN ),
 			'id'          => 'header-right-widget',
 			'beans_type'  => 'grid',
@@ -24,13 +18,13 @@ function ehc_register_widget_areas() {
 		),
 		array(
 			'name'        => __( 'Home Left', CHILD_TEXT_DOMAIN ),
-			'id'          => 'home-center-widget',
+			'id'          => 'home-left-widget',
 			'beans_type'  => 'grid',
 			'description' => __( 'This is the left widget area for the Home page.', CHILD_TEXT_DOMAIN )
 		),
 		array(
 			'name'        => __( 'Home Center', CHILD_TEXT_DOMAIN ),
-			'id'          => 'home-left-widget',
+			'id'          => 'home-center-widget',
 			'beans_type'  => 'grid',
 			'description' => __( 'This is the center widget area for the Home page.', CHILD_TEXT_DOMAIN )
 		),
@@ -39,12 +33,6 @@ function ehc_register_widget_areas() {
 			'id'          => 'home-right-widget',
 			'beans_type'  => 'grid',
 			'description' => __( 'This is the right widget area for the Home page.', CHILD_TEXT_DOMAIN )
-		),
-		array(
-			'name'        => __( 'Before Footer', CHILD_TEXT_DOMAIN ),
-			'id'          => 'before-footer',
-			'beans_type'  => 'grid',
-			'description' => __( 'This is the widget area for before the footer widgets.', CHILD_TEXT_DOMAIN )
 		),
 		array(
 			'name'        => __( 'Footer Widget 1', CHILD_TEXT_DOMAIN ),
