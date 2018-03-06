@@ -47,6 +47,7 @@ function ehc_enqueue_styles() {
 		CHILD_LIB . 'assets/less/layout/widgets.less',
 		CHILD_LIB . 'assets/less/utilities/mixins.less',
 		CHILD_LIB . 'assets/less/plugins/facebook-feed.less',
+		CHILD_LIB . 'assets/less/plugins/feature-a-page.less',
 
 	), 'less' );
 }

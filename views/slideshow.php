@@ -1,4 +1,4 @@
-<div class="uk-slidenav-position uk-margin-large-bottom"
+<div class="uk-slidenav-position uk-margin-small-bottom"
      data-uk-slideshow="{animation:'scroll',autoplay:'true'}">
     <ul class="uk-slideshow uk-overlay-active">
 		<?php if ( $query->have_posts() ) : ?>

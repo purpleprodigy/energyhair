@@ -13,13 +13,13 @@ function ehc_load_nonadmin_files() {
 		'functions/enqueue-assets.php',
 		'functions/helper-functions.php',
 		'functions/register-widgets.php',
-		'functions/favicon.php',
 		'templates/structure/archive.php',
 		'templates/structure/header.php',
 		'templates/structure/post.php',
 		'templates/structure/sidebar.php',
 		'templates/structure/menu.php',
 		'templates/structure/footer.php',
+		'functions/social.php',
 	);
 	ehc_load_specified_files( $filenames );
 }
