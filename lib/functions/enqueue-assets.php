@@ -2,7 +2,7 @@
 
 add_action( 'beans_uikit_enqueue_scripts', 'ehc_enqueue_styles', 5 );
 /**
- * Enqueue styles in production using Beans Compiler API.
+ * Enqueue styles in production using the Beans Compiler API.
  *
  * @since 1.0.0
  *

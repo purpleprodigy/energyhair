@@ -11,7 +11,6 @@ add_action( 'wp', 'ehc_set_up_footer_structure' );
 function ehc_set_up_footer_structure() {
 	beans_wrap_markup( 'beans_footer', 'beans_footer_wrapper', 'div', array( 'class' => 'tm-footer-wrapper' ) );
 
-	//Footer Widgets
 	beans_add_smart_action( 'beans_footer_wrapper_prepend_markup', 'ehc_display_footer_widgets' );
 	/**
 	 * Display the 3 footer widgets.
@@ -39,9 +38,14 @@ function ehc_set_up_footer_structure() {
 	<?php }
 }
 
-// Overwrite the Footer content
 beans_modify_action_callback( 'beans_footer_content', 'beans_child_footer_content' );
-
+/**
+ * Overwrite the footer content.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
 function beans_child_footer_content() {
 	include_once CHILD_THEME_DIR . '/views/footer.php';
 }

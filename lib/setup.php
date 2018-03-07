@@ -26,17 +26,17 @@ function ehc_add_new_image_sizes() {
 			'height' => 400,
 			'crop'   => true,
 		),
-		'home-widget' => array(
+		'home-widget'    => array(
 			'width'  => 480,
 			'height' => 480,
 			'crop'   => true,
 		),
-		'slideshow' => array(
+		'slideshow'      => array(
 			'width'  => 1144,
 			'height' => 763,
 			'crop'   => true,
 		),
-		'gallery' => array(
+		'gallery'        => array(
 			'width'  => 500,
 			'height' => 750,
 			'crop'   => true,

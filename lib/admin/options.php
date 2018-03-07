@@ -18,5 +18,5 @@ function ehc_beans_child_options() {
 			'default'     => false
 		),
 	);
-	beans_register_options( $fields, 'beans_settings', 'options', array( 'title' => 'Purple Prodigy Child Theme Options' ) );
+	beans_register_options( $fields, 'beans_settings', 'options', array( 'title' => 'Energy Hair Co Child Theme Options' ) );
 }
