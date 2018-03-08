@@ -9428,9 +9428,11 @@ content
   padding: 10px 60px;
 }
 @media (min-width: 768px) {
-  img.alignright {
+  .alignright,
+  .alignleft {
     float: none;
     width: 100%;
+    margin-left: 0;
   }
 }
 .tm-footer-wrapper {
