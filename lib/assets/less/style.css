@@ -9428,10 +9428,9 @@ content
   padding: 10px 60px;
 }
 @media (max-width: 768px) {
-  .alignright,
-  .alignleft {
+  img.alignright,
+  img.alignleft {
     float: none;
-    width: 100%;
     margin-left: 0;
   }
 }
