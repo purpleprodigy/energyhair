@@ -9427,7 +9427,7 @@ content
 .ehc-pre-footer-area h2 {
   padding: 10px 60px;
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .alignright,
   .alignleft {
     float: none;
