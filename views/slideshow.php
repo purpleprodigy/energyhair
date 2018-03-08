@@ -13,7 +13,7 @@
                     <div class="slider-image">
                         <a href="<?php the_permalink(); ?>" rel="bookmark"
                            title="<?php esc_html( get_the_title() ); ?>">
-                            <picture><img width="1130px" height="753" src="<?php echo $resized_src; ?>" alt="<?php esc_html( the_title() ); ?>"></picture>
+                            <picture><img width="1130" height="753" src="<?php echo $resized_src; ?>" alt="<?php esc_html( the_title() ); ?>"></picture>
                         </a>
                     </div>
                     <div class="uk-overlay-panel uk-overlay-background uk-overlay-fade uk-overlay-bottom uk-flex uk-flex-bottom uk-flex-middle">
