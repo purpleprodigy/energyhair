@@ -1341,11 +1341,6 @@ iframe {
   padding: 15px;
   background: #fff;
   color: #444;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 .uk-panel-box-hover:hover {
   color: #444;
@@ -1599,14 +1594,6 @@ iframe {
 /* ========================================================================
    Component: Comment
  ========================================================================== */
-.uk-comment {
-  background: #fff;
-  margin-bottom: 30px;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-}
 /* Sub-object `uk-comment-header`
  ========================================================================== */
 .uk-comment-header {
@@ -2370,7 +2357,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-pagination > li {
   display: inline-block;
   /* 1 */
-  font-size: 14px;
+  font-size: 1rem;
   /* 2 */
   vertical-align: top;
 }
@@ -2392,22 +2379,13 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   box-sizing: content-box;
   /* 2 */
   text-align: center;
-  border-radius: 0;
-  padding: 10px;
-  font-weight: 400;
-  color: green;
 }
 /*
  * Links
  */
 .uk-pagination > li > a {
-  background: #2B2C2D;
-  color: #fff;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  background: #eee;
+  color: #444;
 }
 /*
  * Hover
@@ -2416,8 +2394,8 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  */
 .uk-pagination > li > a:hover,
 .uk-pagination > li > a:focus {
-  background-color: green;
-  color: #fff;
+  background-color: #f5f5f5;
+  color: #444;
   /* 2 */
   outline: none;
 }
@@ -2430,7 +2408,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
  * Active
  */
 .uk-pagination > .uk-active > span {
-  background: green;
+  background: #00a8e6;
   color: #fff;
 }
 /*
@@ -3135,7 +3113,7 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
 .uk-form input[type="tel"],
 .uk-form input[type="color"] {
   /* 1 */
-  height: 45px;
+  height: 30px;
   /* 2 */
   max-width: 100%;
   /* 3 */
@@ -3234,8 +3212,6 @@ html:not(.uk-touch) .uk-nav-offcanvas ul a:hover {
   /* 5 */
   font-size: 18px;
   line-height: 30px;
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 16px;
 }
 /*
  * 1. Fixes IE9
@@ -5845,13 +5821,6 @@ select.uk-form-width-mini {
   text-align: center;
   vertical-align: middle;
   opacity: 0.3;
-  background: #000;
-  opacity: 1;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
 }
 /* Icon */
 .uk-close:after {
@@ -5878,12 +5847,9 @@ select.uk-form-width-mini {
 /* Modifier
  ========================================================================== */
 .uk-close-alt {
-  padding: 0;
+  padding: 2px;
   border-radius: 50%;
   background: #eee;
-  width: 26px;
-  line-height: 26px !important;
-  border-radius: 13px;
   opacity: 1;
 }
 /* Hover */
@@ -5899,36 +5865,13 @@ select.uk-form-width-mini {
 .uk-close-alt:focus:after {
   opacity: 0.8;
 }
-.uk-close::after {
-  content: '\e117';
-  font-size: 10px;
-}
-.uk-close:hover,
-.uk-close:focus {
-  opacity: 0.7;
-}
-.uk-close-alt:hover {
-  background: green;
-}
-.uk-close-alt:hover,
-.uk-close-alt:focus {
-  opacity: 1;
-}
-.uk-close-alt::after {
-  color: #fff;
-  opacity: 1;
-}
-.uk-close-alt:hover::after {
-  color: #fff;
-  opacity: 1;
-}
 /* ========================================================================
    Component: Badge
  ========================================================================== */
 .uk-badge {
   display: inline-block;
   padding: 0 5px;
-  background: green;
+  background: #00a8e6;
   font-size: 10px;
   font-weight: bold;
   line-height: 14px;
@@ -6157,7 +6100,7 @@ a.uk-thumbnail:focus {
   left: 0;
   right: 0;
   /* 2 */
-  padding: 10px;
+  padding: 20px;
   color: #fff;
 }
 /*
@@ -8871,384 +8814,6 @@ a.uk-thumbnail:focus {
     page-break-after: avoid;
   }
 }
-:not(pre) > code,
-:not(pre) > kbd,
-:not(pre) > samp {
-  white-space: normal;
-}
-/* ========================================================================
-   Component: Overlay
- ========================================================================== */
-/*
- * 1. Container width fits its content
- * 2. Create position context
- * 3. Set max-width for responsive images to prevent `inline-block` consequences
- * 4. Remove the gap between the container and its child element
- * 5. Needed for transitions and to fixed wrong scaling calculation for images in Chrome
- * 6. Fixed `overflow: hidden` to be ignored with border-radius and CSS transforms in Webkit
- * 7. Reset margin
- */
-.uk-overlay {
-  /* 1 */
-  display: inline-block;
-  /* 2 */
-  position: relative;
-  /* 3 */
-  max-width: 100%;
-  /* 4 */
-  vertical-align: middle;
-  /* 5 */
-  overflow: hidden;
-  /* 6 */
-  -webkit-transform: translateZ(0);
-  /* 7 */
-  margin: 0;
-}
-/* 6 for Safari */
-.uk-overlay.uk-border-circle {
-  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
-}
-/*
- * Remove margin from content
- */
-.uk-overlay > :first-child {
-  margin-bottom: 0;
-}
-/* Sub-object `uk-overlay-panel`
- ========================================================================== */
-/*
- * 1. Position cover
- * 2. Style
- */
-.uk-overlay-panel {
-  /* 1 */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  padding: 10px;
-  color: #fff;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-overlay-panel > :last-child,
-.uk-overlay-panel.uk-flex > * > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Keep color for headings if the default heading color is changed
- */
-.uk-overlay-panel h1,
-.uk-overlay-panel h2,
-.uk-overlay-panel h3,
-.uk-overlay-panel h4,
-.uk-overlay-panel h5,
-.uk-overlay-panel h6 {
-  color: inherit;
-}
-.uk-overlay-panel a:not([class]) {
-  color: inherit;
-  text-decoration: none;
-}
-.uk-overlay-panel a[class*='uk-icon-']:not(.uk-icon-button) {
-  color: inherit;
-}
-/* Sub-object `uk-overlay-hover` and `uk-overlay-active`
- ========================================================================== */
-.uk-overlay-hover:not(:hover):not(.uk-hover) .uk-overlay-panel:not(.uk-ignore) {
-  opacity: 0;
-}
-.uk-overlay-active :not(.uk-active) > .uk-overlay-panel:not(.uk-ignore) {
-  opacity: 0;
-}
-/* Modifier `uk-overlay-background`
- ========================================================================== */
-.uk-overlay-background {
-  background: rgba(0, 0, 0, 0.5);
-}
-/* Modifier `uk-overlay-image`
- ========================================================================== */
-/*
- * Reset panel
- */
-.uk-overlay-image {
-  padding: 0;
-}
-/* Position modifiers
- ========================================================================== */
-.uk-overlay-top {
-  bottom: auto;
-}
-.uk-overlay-bottom {
-  top: auto;
-}
-.uk-overlay-left {
-  right: auto;
-}
-.uk-overlay-right {
-  left: auto;
-}
-/* Sub-object `uk-overlay-icon`
- ========================================================================== */
-.uk-overlay-icon:before {
-  content: "\f002";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  line-height: 1;
-  font-family: FontAwesome;
-  text-align: center;
-  color: #fff;
-}
-/* Transitions
- ========================================================================== */
-.uk-overlay-fade,
-.uk-overlay-scale,
-.uk-overlay-spin,
-.uk-overlay-grayscale,
-.uk-overlay-blur,
-[class*='uk-overlay-slide'] {
-  transition-duration: 0.3s;
-  transition-timing-function: ease-out;
-  transition-property: opacity, transform, filter;
-}
-.uk-overlay-active .uk-overlay-fade,
-.uk-overlay-active .uk-overlay-scale,
-.uk-overlay-active .uk-overlay-spin,
-.uk-overlay-active [class*='uk-overlay-slide'] {
-  transition-duration: 0.8s;
-}
-/*
- * Fade
- */
-.uk-overlay-fade {
-  opacity: 0.7;
-}
-.uk-overlay-hover:hover .uk-overlay-fade,
-.uk-overlay-hover.uk-hover .uk-overlay-fade,
-.uk-overlay-active .uk-active > .uk-overlay-fade {
-  opacity: 1;
-}
-/*
- * Scale
- */
-.uk-overlay-scale {
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-.uk-overlay-hover:hover .uk-overlay-scale,
-.uk-overlay-hover.uk-hover .uk-overlay-scale,
-.uk-overlay-active .uk-active > .uk-overlay-scale {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-}
-/*
- * Spin
- */
-.uk-overlay-spin {
-  -webkit-transform: scale(1) rotate(0deg);
-  transform: scale(1) rotate(0deg);
-}
-.uk-overlay-hover:hover .uk-overlay-spin,
-.uk-overlay-hover.uk-hover .uk-overlay-spin,
-.uk-overlay-active .uk-active > .uk-overlay-spin {
-  -webkit-transform: scale(1.1) rotate(3deg);
-  transform: scale(1.1) rotate(3deg);
-}
-/*
- * Grayscale
- */
-.uk-overlay-grayscale {
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-}
-.uk-overlay-hover:hover .uk-overlay-grayscale,
-.uk-overlay-hover.uk-hover .uk-overlay-grayscale,
-.uk-overlay-active .uk-active > .uk-overlay-grayscale {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
-}
-/*
- * Slide
- */
-[class*='uk-overlay-slide'] {
-  opacity: 0;
-}
-/* Top */
-.uk-overlay-slide-top {
-  -webkit-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-/* Bottom */
-.uk-overlay-slide-bottom {
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-}
-/* Left */
-.uk-overlay-slide-left {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-/* Right */
-.uk-overlay-slide-right {
-  -webkit-transform: translateX(100%);
-  transform: translateX(100%);
-}
-/* Hover */
-.uk-overlay-hover:hover [class*='uk-overlay-slide'],
-.uk-overlay-hover.uk-hover [class*='uk-overlay-slide'],
-.uk-overlay-active .uk-active > [class*='uk-overlay-slide'] {
-  opacity: 1;
-  -webkit-transform: translateX(0) translateY(0);
-  transform: translateX(0) translateY(0);
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-area`
- ========================================================================== */
-/*
- * 1. Set position
- * 2. Set style
- * 3. Fade-in transition
- */
-.uk-overlay-area {
-  /* 1 */
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  background: rgba(0, 0, 0, 0.3);
-  /* 3 */
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-/*
- * Hover
- * 1. `uk-hover` to support touch devices
- * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
- */
-.uk-overlay:hover .uk-overlay-area,
-.uk-overlay.uk-hover .uk-overlay-area,
-.uk-overlay-toggle:hover .uk-overlay-area,
-.uk-overlay-toggle.uk-hover .uk-overlay-area {
-  opacity: 1;
-}
-/*
- * Icon
- */
-.uk-overlay-area:empty:before {
-  content: "\f002";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  margin-top: -25px;
-  margin-left: -25px;
-  font-size: 50px;
-  line-height: 1;
-  font-family: FontAwesome;
-  text-align: center;
-  color: #fff;
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-area-content`
- ========================================================================== */
-/*
- * Remove whitespace between child elements when using `inline-block`
- * Needed for Firefox
- */
-.uk-overlay-area:not(:empty) {
-  font-size: 0.001px;
-}
-/*
- * 1. Needed for vertical alignment
- */
-.uk-overlay-area:not(:empty):before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-/*
- * 1. Set vertical alignment
- * 2. Reset whitespace hack
- * 3. Set horizontal alignment
- * 4. Set style
- */
-.uk-overlay-area-content {
-  /* 1 */
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  vertical-align: middle;
-  /* 2 */
-  font-size: 1rem;
-  /* 3 */
-  text-align: center;
-  /* 4 */
-  padding: 0 15px;
-  color: #fff;
-}
-/*
- * Remove margin from the last-child
- */
-.uk-overlay-area-content > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Links in overlay area
- */
-.uk-overlay-area-content a:not([class]),
-.uk-overlay-area-content a:not([class]):hover {
-  color: inherit;
-}
-/* DEPRECATED
- * Sub-object `uk-overlay-caption`
- ========================================================================== */
-/*
- * 1. Set position
- * 2. Set style
- * 3. Fade-in transition
- */
-.uk-overlay-caption {
-  /* 1 */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* 2 */
-  padding: 15px;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  /* 3 */
-  opacity: 0;
-  -webkit-transition: opacity 0.15s linear;
-  transition: opacity 0.15s linear;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-/*
- * Hover
- * 1. `uk-hover` to support touch devices
- * 2. Use optional `uk-overlay-toggle` to trigger the overlay earlier
- */
-.uk-overlay:hover .uk-overlay-caption,
-.uk-overlay.uk-hover .uk-overlay-caption,
-.uk-overlay-toggle:hover .uk-overlay-caption,
-.uk-overlay-toggle.uk-hover .uk-overlay-caption {
-  opacity: 1;
-}
 .tm-content.uk-container.uk-container-center.uk-grid.uk-grid-match {
   padding: 0;
 }
@@ -9313,28 +8878,6 @@ a.uk-thumbnail:focus {
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
-[class*='uk-animation-'] {
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-/* Duration modifiers
-========================================================================== */
-.uk-animation-15 {
-  -webkit-animation-duration: 15s;
-  animation-duration: 15s;
-}
-.uk-animation-1 {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-}
-.uk-animation-2 {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-}
 input[type="button"] {
   /* 1 */
   -webkit-appearance: none;
@@ -9388,901 +8931,9 @@ input[type="button"]:hover {
   -moz-box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
   box-shadow: 0 14px 25px rgba(0, 0, 0, 0.16);
 }
-/* Icon */
-.uk-close:after {
-  display: block;
-  content: "\e306";
-  font-family: 'icomoon' !important;
-}
-/* ========================================================================
-   Component: Dotnav
- ========================================================================== */
-/*
- * 1. Gutter
- * 2. Remove default list style
- */
-.uk-dotnav {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  /* 1 */
-  margin-left: -5px;
-  margin-top: -5px;
-  /* 2 */
-  padding: 0;
-  list-style: none;
-}
-/*
- * 1. Space is allocated solely based on content dimensions
- * 2. Horizontal gutter is using `padding` so `uk-width-*` classes can be applied
- */
-.uk-dotnav > * {
-  /* 1 */
-  -ms-flex: none;
-  -webkit-flex: none;
-  flex: none;
-  /* 2 */
-  padding-left: 5px;
-  margin-top: 5px;
-}
-/*
- * DEPRECATED IE9 Support
- */
-.uk-dotnav:before,
-.uk-dotnav:after {
-  content: "";
-  display: block;
-  overflow: hidden;
-}
-.uk-dotnav:after {
-  clear: both;
-}
-.uk-dotnav > * {
-  float: left;
-}
-/* Items
- ========================================================================== */
-/*
- * Items
- * 1. Hide text if present
- */
-.uk-dotnav > * > * {
-  display: block;
-  box-sizing: content-box;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(50, 50, 50, 0.1);
-  /* 1 */
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-/*
- * Hover
- * 1. Apply hover style also to focus state
- * 2. Remove default focus style
- */
-.uk-dotnav > * > :hover,
-.uk-dotnav > * > :focus {
-  background: rgba(50, 50, 50, 0.4);
-  /* 2 */
-  outline: none;
-}
-/* OnClick */
-.uk-dotnav > * > :active {
-  background: rgba(50, 50, 50, 0.6);
-}
-/* Active */
-.uk-dotnav > .uk-active > * {
-  background: rgba(50, 50, 50, 0.4);
-}
-/* Modifier: `uk-dotnav-contrast`
- ========================================================================== */
-.uk-dotnav-contrast > * > * {
-  background: rgba(255, 255, 255, 0.4);
-}
-/*
- * Hover
- * 1. Apply hover style also to focus state
- */
-.uk-dotnav-contrast > * > :hover,
-.uk-dotnav-contrast > * > :focus {
-  background: rgba(255, 255, 255, 0.7);
-}
-/* OnClick */
-.uk-dotnav-contrast > * > :active {
-  background: rgba(255, 255, 255, 0.9);
-}
-/* Active */
-.uk-dotnav-contrast > .uk-active > * {
-  background: rgba(255, 255, 255, 0.9);
-}
-/* Modifier: 'uk-dotnav-vertical'
- ========================================================================== */
-/*
- * DEPRECATED
- */
-.uk-dotnav-vertical {
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-}
-/*
- * DEPRECATED IE9 Support
- */
-.uk-dotnav-vertical > * {
-  float: none;
-}
-/* ========================================================================
-   Component: Description list
- ========================================================================== */
-/* Modifier: `uk-description-list-horizontal`
- ========================================================================== */
-/* Tablet and bigger */
-@media (min-width: 768px) {
-  .uk-description-list-horizontal {
-    overflow: hidden;
-  }
-  .uk-description-list-horizontal > dt {
-    width: 300px;
-    float: left;
-    clear: both;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-  .uk-description-list-horizontal > dd {
-    margin-left: 320px;
-  }
-}
-/* Modifier: `uk-description-list-line`
- ========================================================================== */
-.uk-description-list-line > dt {
-  font-weight: normal;
-}
-.uk-description-list-line > dt:nth-child(n+2) {
-  margin-top: 5px;
-  padding-top: 5px;
-  border-top: 1px solid #2B2C2D;
-}
-.uk-description-list-line > dd {
-  color: #444;
-}
 .uk-nav-offcanvas > li > a,
 .uk-nav-offcanvas ul a {
   color: #d8bb8f;
-}
-/* ========================================================================
-Component: Slidenav
-========================================================================== */
-/*
-* 1. Required for `a` elements
-* 2. Dimension
-* 3. Style
-*/
-.uk-slidenav {
-  /* 1 */
-  display: inline-block;
-  /* 2 */
-  box-sizing: border-box;
-  width: 30px;
-  height: 30px;
-  /* 3 */
-  line-height: 30px;
-  color: rgba(50, 50, 50, 0.4);
-  font-size: 40px;
-  text-align: center;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-  transform: scale(0.8);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-/*
-* Hover
-* 1. Apply hover style also to focus state
-* 2. Remove default focus style
-* 3. Required for `a` elements
-* 4. Style
-*/
-.uk-slidenav:hover,
-.uk-slidenav:focus {
-  /* 2 */
-  outline: none;
-  /* 3 */
-  text-decoration: none;
-  /* 4 */
-  color: #fff;
-  cursor: pointer;
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}
-/* Active */
-.uk-slidenav:active {
-  color: rgba(50, 50, 50, 0.9);
-}
-/*
-* Icons
-*/
-.uk-slidenav-previous:before {
-  content: "\f104";
-  font-family: FontAwesome;
-}
-.uk-slidenav-next:before {
-  content: "\f105";
-  font-family: FontAwesome;
-}
-/* Sub-object: `uk-slidenav-position`
-========================================================================== */
-/*
-* Create position context
-*/
-.uk-slidenav-position {
-  position: relative;
-}
-/*
-* Center vertically
-*/
-.uk-slidenav-position .uk-slidenav {
-  display: none;
-  position: absolute;
-  top: 50%;
-  z-index: 1;
-  margin-top: -15px;
-}
-.uk-slidenav-position:hover .uk-slidenav {
-  display: block;
-}
-.uk-slidenav-position .uk-slidenav-previous {
-  left: 20px;
-}
-.uk-slidenav-position .uk-slidenav-next {
-  right: 20px;
-}
-/* Modifier: `uk-slidenav-contrast`
-========================================================================== */
-.uk-slidenav-contrast {
-  color: rgba(255, 255, 255, 0.5);
-}
-/*
-* Hover
-* 1. Apply hover style also to focus state
-*/
-.uk-slidenav-contrast:hover,
-.uk-slidenav-contrast:focus {
-  color: rgba(255, 255, 255, 0.7);
-}
-/* Active */
-.uk-slidenav-contrast:active {
-  color: rgba(255, 255, 255, 0.9);
-}
-/* ========================================================================
-   Component: Form
- ========================================================================== */
-/*
- * 1. Define consistent box sizing.
- *    Default is `content-box` with following exceptions set to `border-box`
- *    `button`, `select`, `input[type="checkbox"]` and `input[type="radio"]`
- *    `input[type="search"]` in Chrome, Safari and Opera
- *    `input[type="color"]` in Firefox
- * 2. Address margins set differently in Firefox/IE and Chrome/Safari/Opera.
- * 3. Remove `border-radius` in iOS.
- * 4. Correct `font` properties and `color` not being inherited.
- */
-.uk-form input,
-.uk-form select,
-.uk-form textarea,
-input {
-  /* 1 */
-  box-sizing: border-box;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-  border-radius: 0 !important;
-  /* 4 */
-  font: inherit;
-  color: inherit;
-}
-/*
- * Address inconsistent `text-transform` inheritance which is only inherit in Firefox
- */
-.uk-form select {
-  text-transform: none;
-}
-/*
- * 1. Correct `font` properties not being inherited.
- * 2. Don't inherit the `font-weight` and use `bold` instead.
- * NOTE: Both declarations don't work in Chrome, Safari and Opera.
- */
-.uk-form optgroup {
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  font-weight: bold;
-}
-/*
- * Removes inner padding and border in Firefox 4+.
- */
-.uk-form input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-/*
- * Removes excess padding in IE 8/9/10.
- */
-.uk-form input[type="checkbox"],
-.uk-form input[type="radio"] {
-  padding: 0;
-}
-/*
- * Improves consistency of cursor style for clickable elements
- */
-.uk-form input[type="checkbox"]:not(:disabled),
-.uk-form input[type="radio"]:not(:disabled) {
-  cursor: pointer;
-}
-/*
- * Remove default style in iOS.
- */
-.uk-form textarea,
-.uk-form input:not([type]),
-.uk-form input[type="text"],
-.uk-form input[type="password"],
-.uk-form input[type="email"],
-.uk-form input[type="url"],
-.uk-form input[type="search"],
-.uk-form input[type="tel"],
-.uk-form input[type="number"],
-.uk-form input[type="datetime"] {
-  -webkit-appearance: none;
-}
-/*
- * Remove inner padding and search cancel button in Chrome, Safari and Opera on OS X.
- */
-.uk-form input[type="search"]::-webkit-search-cancel-button,
-.uk-form input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-/*
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-.uk-form input[type="number"]::-webkit-inner-spin-button,
-.uk-form input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-/*
- * Define consistent border, margin, and padding.
- */
-.uk-form fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-/*
- * 1. Remove default vertical scrollbar in IE 8/9/10/11.
- * 2. Improve readability and alignment in all browsers.
- */
-.uk-form textarea {
-  /* 1 */
-  overflow: auto;
-  /* 2 */
-  vertical-align: top;
-}
-/*
- * Removes placeholder transparency in Firefox.
- */
-.uk-form ::-moz-placeholder {
-  opacity: 1;
-}
-/*
- * Removes `box-shadow` for invalid controls in Firefox.
- */
-.uk-form :invalid {
-  box-shadow: none;
-}
-/*
- * Vertical alignment
- */
-.uk-form input:not([type="radio"]):not([type="checkbox"]),
-.uk-form select {
-  vertical-align: middle;
-}
-/* Style
- ========================================================================== */
-/*
- * Remove margin from the last-child
- */
-.uk-form > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Controls
- * Except for `range`, `radio`, `checkbox`, `file`, `submit`, `reset`, `button` and `image`
- * 1. Must be `height` because `min-height` is not working in OSX
- * 2. Responsiveness: Sets a maximum width relative to the parent to scale on narrower viewports
- * 3. Vertical `padding` needed for `select` elements in Firefox
- * 4. Style
- */
-.uk-form select,
-.uk-form textarea,
-.uk-form input:not([type]),
-.uk-form input[type="text"],
-.uk-form input[type="password"],
-.uk-form input[type="datetime"],
-.uk-form input[type="datetime-local"],
-.uk-form input[type="date"],
-.uk-form input[type="month"],
-.uk-form input[type="time"],
-.uk-form input[type="week"],
-.uk-form input[type="number"],
-.uk-form input[type="email"],
-.uk-form input[type="url"],
-.uk-form input[type="search"],
-.uk-form input[type="tel"],
-.uk-form input[type="color"] {
-  /* 1 */
-  height: 45px;
-  /* 2 */
-  max-width: 100%;
-  /* 3 */
-  padding: 4px 6px;
-  /* 4 */
-  border: 1px solid #ddd;
-  background: #fff;
-  color: #444;
-  -webkit-transition: all 0.2s linear;
-  -webkit-transition-property: border, background, color, box-shadow, padding;
-  transition: all 0.2s linear;
-  transition-property: border, background, color, box-shadow, padding;
-}
-.uk-form select:focus,
-.uk-form textarea:focus,
-.uk-form input:not([type]):focus,
-.uk-form input[type="text"]:focus,
-.uk-form input[type="password"]:focus,
-.uk-form input[type="datetime"]:focus,
-.uk-form input[type="datetime-local"]:focus,
-.uk-form input[type="date"]:focus,
-.uk-form input[type="month"]:focus,
-.uk-form input[type="time"]:focus,
-.uk-form input[type="week"]:focus,
-.uk-form input[type="number"]:focus,
-.uk-form input[type="email"]:focus,
-.uk-form input[type="url"]:focus,
-.uk-form input[type="search"]:focus,
-.uk-form input[type="tel"]:focus,
-.uk-form input[type="color"]:focus {
-  border-color: #99baca;
-  outline: 0;
-  background: #f5fbfe;
-  color: #444;
-}
-.uk-form select:disabled,
-.uk-form textarea:disabled,
-.uk-form input:not([type]):disabled,
-.uk-form input[type="text"]:disabled,
-.uk-form input[type="password"]:disabled,
-.uk-form input[type="datetime"]:disabled,
-.uk-form input[type="datetime-local"]:disabled,
-.uk-form input[type="date"]:disabled,
-.uk-form input[type="month"]:disabled,
-.uk-form input[type="time"]:disabled,
-.uk-form input[type="week"]:disabled,
-.uk-form input[type="number"]:disabled,
-.uk-form input[type="email"]:disabled,
-.uk-form input[type="url"]:disabled,
-.uk-form input[type="search"]:disabled,
-.uk-form input[type="tel"]:disabled,
-.uk-form input[type="color"]:disabled {
-  border-color: #ddd;
-  background-color: #f5f5f5;
-  color: #999;
-}
-/*
- * Placeholder
- */
-.uk-form :-ms-input-placeholder {
-  color: #999 !important;
-}
-.uk-form ::-moz-placeholder {
-  color: #999;
-}
-.uk-form ::-webkit-input-placeholder {
-  color: #999;
-}
-.uk-form :disabled:-ms-input-placeholder {
-  color: #999 !important;
-}
-.uk-form :disabled::-moz-placeholder {
-  color: #999;
-}
-.uk-form :disabled::-webkit-input-placeholder {
-  color: #999;
-}
-/*
- * Legend
- * 1. Behave like block element
- * 2. Correct `color` not being inherited in IE 8/9/10/11.
- * 3. Remove padding
- * 4. `margin-bottom` is not working in Safari and Opera.
- *    Using `padding` and :after instead to create the border
- * 5. Style
- */
-.uk-form legend {
-  /* 1 */
-  width: 100%;
-  /* 2 */
-  border: 0;
-  /* 3 */
-  padding: 0;
-  /* 4 */
-  padding-bottom: 15px;
-  /* 5 */
-  font-size: 18px;
-  line-height: 30px;
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 16px;
-}
-/*
- * 1. Fixes IE9
- */
-.uk-form legend:after {
-  content: "";
-  display: block;
-  border-bottom: 1px solid #ddd;
-  /* 1 */
-  width: 100%;
-}
-/* Size modifiers
- * Higher specificity needed to override defaults
- ========================================================================== */
-select.uk-form-small,
-textarea.uk-form-small,
-input[type].uk-form-small,
-input:not([type]).uk-form-small {
-  height: 25px;
-  padding: 3px 3px;
-  font-size: 12px;
-}
-select.uk-form-large,
-textarea.uk-form-large,
-input[type].uk-form-large,
-input:not([type]).uk-form-large {
-  height: 40px;
-  padding: 8px 6px;
-  font-size: 16px;
-}
-/* Reset height
- * Must be after size modifiers
- ========================================================================== */
-.uk-form textarea,
-.uk-form select[multiple],
-.uk-form select[size] {
-  height: auto;
-}
-/* Validation states
- * Using !important to keep the selector simple
- ========================================================================== */
-/*
- * Error state
- */
-.uk-form-danger {
-  border-color: #dc8d99 !important;
-  background: #fff7f8 !important;
-  color: #d85030 !important;
-}
-/*
- * Success state
- */
-.uk-form-success {
-  border-color: #8ec73b !important;
-  background: #fafff2 !important;
-  color: #659f13 !important;
-}
-/* Style modifiers
- * Using !important to keep the selector simple
- ========================================================================== */
-/*
- * Blank form
- */
-.uk-form-blank {
-  border-color: transparent !important;
-  border-style: dashed !important;
-  background: none !important;
-}
-.uk-form-blank:focus {
-  border-color: #ddd !important;
-}
-/* Size sub-modifiers
- ========================================================================== */
-/*
- * Fixed widths
- * Different widths for mini sized `input` and `select` elements
- */
-input.uk-form-width-mini {
-  width: 40px;
-}
-select.uk-form-width-mini {
-  width: 65px;
-}
-.uk-form-width-small {
-  width: 130px;
-}
-.uk-form-width-medium {
-  width: 200px;
-}
-.uk-form-width-large {
-  width: 500px;
-}
-/* Sub-objects: `uk-form-row`
- * Groups labels and controls in rows
- ========================================================================== */
-/*
- * Micro clearfix
- * Needed for `uk-form-horizontal` modifier
- */
-.uk-form-row:before,
-.uk-form-row:after {
-  content: "";
-  display: table;
-}
-.uk-form-row:after {
-  clear: both;
-}
-/*
- * Vertical gutter
- */
-.uk-form-row + .uk-form-row {
-  margin-top: 15px;
-}
-/* Help text
- * Sub-object: `uk-form-help-inline`, `uk-form-help-block`
- ========================================================================== */
-.uk-form-help-inline {
-  display: inline-block;
-  margin: 0 0 0 10px;
-}
-.uk-form-help-block {
-  margin: 5px 0 0 0;
-}
-/* Controls content
- * Sub-object: `uk-form-controls`, `uk-form-controls-condensed`
- ========================================================================== */
-/*
- * Remove margins
- */
-.uk-form-controls > :first-child {
-  margin-top: 0;
-}
-.uk-form-controls > :last-child {
-  margin-bottom: 0;
-}
-/*
- * Group controls and text into blocks with a small spacing between blocks
- */
-.uk-form-controls-condensed {
-  margin: 5px 0;
-}
-/* Modifier: `uk-form-stacked`
- * Requires sub-object: `uk-form-label`
- ========================================================================== */
-.uk-form-stacked .uk-form-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-/* Modifier: `uk-form-horizontal`
- * Requires sub-objects: `uk-form-label`, `uk-form-controls`
- ========================================================================== */
-/* Tablet portrait and smaller */
-@media (max-width: 959px) {
-  /* Behave like `uk-form-stacked` */
-  .uk-form-horizontal .uk-form-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-}
-/* Desktop and bigger */
-@media (min-width: 960px) {
-  .uk-form-horizontal .uk-form-label {
-    width: 200px;
-    margin-top: 5px;
-    float: left;
-  }
-  .uk-form-horizontal .uk-form-controls {
-    margin-left: 215px;
-  }
-  /* Better vertical alignment if controls are checkboxes and radio buttons with text */
-  .uk-form-horizontal .uk-form-controls-text {
-    padding-top: 5px;
-  }
-}
-/* Sub-object: `uk-form-icon`
- ========================================================================== */
-/*
- * 1. Container width fits its content
- * 2. Create position context
- * 3. Prevent `inline-block` consequences
- */
-.uk-form-icon {
-  /* 1 */
-  display: inline-block;
-  /* 2 */
-  position: relative;
-  /* 3 */
-  max-width: 100%;
-}
-/*
- * 1. Make form element clickable through icon
- */
-.uk-form-icon > [class*='uk-icon-'] {
-  position: absolute;
-  top: 50%;
-  width: 30px;
-  margin-top: -7px;
-  font-size: 14px;
-  color: #999;
-  text-align: center;
-  /* 1 */
-  pointer-events: none;
-}
-.uk-form-icon:not(.uk-form-icon-flip) > input {
-  padding-left: 30px !important;
-}
-/*
- * Sub-modifier: `uk-form-icon-flip`
- */
-.uk-form-icon-flip > [class*='uk-icon-'] {
-  right: 0;
-}
-.uk-form-icon-flip > input {
-  padding-right: 30px !important;
-}
-input {
-  height: 40px;
-}
-/* ========================================================================
-   Component: Comment
- ========================================================================== */
-.uk-comment {
-  background: #fff;
-  margin-bottom: 30px;
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  padding: 30px;
-}
-/* Sub-object `uk-comment-header`
- ========================================================================== */
-.uk-comment-header {
-  margin-bottom: 15px;
-}
-/*
- * Micro clearfix
- */
-.uk-comment-header:before,
-.uk-comment-header:after {
-  content: "";
-  display: table;
-}
-.uk-comment-header:after {
-  clear: both;
-}
-/* Sub-object `uk-comment-avatar`
- ========================================================================== */
-.uk-comment-avatar {
-  margin-right: 15px;
-  float: left;
-}
-/* Sub-object `uk-comment-title`
- ========================================================================== */
-.uk-comment-title {
-  margin: 5px 0 0 0;
-  font-size: 16px;
-  line-height: 22px;
-}
-/* Sub-object `uk-comment-meta`
- ========================================================================== */
-.uk-comment-meta {
-  margin: 2px 0 0 0;
-  font-size: 11px;
-  line-height: 16px;
-  color: #999;
-}
-/* Sub-object `uk-comment-body`
- ========================================================================== */
-/*
- * Remove margin from the last-child
- */
-.uk-comment-body > :last-child {
-  margin-bottom: 0;
-}
-/* Sub-object `uk-comment-list`
- ========================================================================== */
-.uk-comment-list {
-  padding: 0;
-  list-style: none;
-}
-.uk-comment-list .uk-comment + ul {
-  margin: 15px 0 0 0;
-  list-style: none;
-}
-.uk-comment-list > li:nth-child(n+2),
-.uk-comment-list .uk-comment + ul > li:nth-child(n+2) {
-  margin-top: 15px;
-}
-/* Tablet and bigger */
-@media (min-width: 768px) {
-  .uk-comment-list .uk-comment + ul {
-    padding-left: 100px;
-  }
-}
-/* Modifier `uk-comment-primary`
- ========================================================================== */
-/* ========================================================================
-   Component: Badge
- ========================================================================== */
-.uk-badge {
-  display: inline-block;
-  padding: 0 5px;
-  background: green;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 14px;
-  color: #fff;
-  text-align: center;
-  vertical-align: middle;
-  text-transform: none;
-}
-/*
- * Keep color when badge is a link
- */
-a.uk-badge:hover {
-  color: #fff;
-}
-/* Modifier: `uk-badge-notification`;
- ========================================================================== */
-.uk-badge-notification {
-  box-sizing: border-box;
-  min-width: 18px;
-  border-radius: 500px;
-  font-size: 12px;
-  line-height: 18px;
-}
-/* Color modifier
- ========================================================================== */
-/*
- * Modifier: `uk-badge-success`
- */
-.uk-badge-success {
-  background-color: #8cc14c;
-}
-/*
- * Modifier: `uk-badge-warning`
- */
-.uk-badge-warning {
-  background-color: #faa732;
-}
-/*
- * Modifier: `uk-badge-danger`
- */
-.uk-badge-danger {
-  background-color: #da314b;
 }
 /* ========================================================================
    Component: Nav
@@ -10342,19 +8993,6 @@ a.uk-badge:hover {
  */
 ul.uk-nav-sub {
   padding: 5px 0 5px 15px;
-}
-/* Modifier: `uk-nav-parent-icon`
- ========================================================================== */
-.uk-nav-parent-icon > .uk-parent > a:after {
-  content: "\f104";
-  width: 20px;
-  margin-right: -10px;
-  float: right;
-  font-family: FontAwesome;
-  text-align: center;
-}
-.uk-nav-parent-icon > .uk-parent.uk-open > a:after {
-  content: "\f107";
 }
 /* Modifier `uk-nav-side`
  ========================================================================== */
@@ -10659,6 +9297,12 @@ li.uk-slide-after {
 .uk-table-hover tbody tr:hover {
   background: #EEE;
 }
+/*
+ * Pricing table
+ */
+.pricing {
+  margin-top: 20px;
+}
 .pricing img {
   margin-top: 45px;
 }
@@ -10669,9 +9313,6 @@ li.uk-slide-after {
     margin-left: 0;
   }
 }
-/*--------------------------------------------------------------
-Site
---------------------------------------------------------------*/
 a {
   -webkit-transition: color 0.4s ease-in-out;
   -moz-transition: color 0.4s ease-in-out;
@@ -10717,56 +9358,8 @@ Header
   letter-spacing: 2px;
 }
 /*-----------------------------------------------------------
-	Above Header Widget
+	Header Right Widget
 /*------------------------------------------------------------*/
-.above-header-widget {
-  padding-top: 10px;
-  background: #2B2C2D;
-  text-align: right;
-}
-@media (min-width: 768px) {
-  .above-header-widget {
-    display: block;
-  }
-}
-.above-header-widget .tm-widget {
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-}
-.above-header-widget .tm-widget p {
-  margin: 0;
-  line-height: 1;
-}
-.above-header-widget .tm-widget .uk-icon-button {
-  float: right;
-  margin-right: 5px;
-  margin-left: 12px;
-  width: 28px;
-  height: 28px;
-  font-size: 16px;
-  line-height: 24px;
-  background: green;
-  color: #fff;
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
-}
-.above-header-widget .tm-widget .uk-icon-button:hover {
-  background: #505254;
-  -webkit-transform: rotateZ(360deg);
-  -moz-transform: rotateZ(360deg);
-  -ms-transform: rotateZ(360deg);
-  -o-transform: rotateZ(360deg);
-}
-.above-header-widget a {
-  color: #fff;
-}
-.above-header-widget a:hover {
-  color: green;
-}
 .header-right-widget {
   float: right;
   text-align: right;
@@ -10783,17 +9376,18 @@ Header
   position: relative;
   top: 1px;
 }
+@media (max-width: 768px) {
+  .header-right-widget {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
 /*--------------------------------------------------------------
 content
 --------------------------------------------------------------*/
 .tm-main {
   background: #2B2C2D;
-}
-.tm-primary .uk-article,
-.tm-secondary .tm-widget {
-  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }
 .tm-primary .uk-article {
   padding: 30px;
@@ -10801,26 +9395,6 @@ content
 @media (min-width: 768px) {
   .tm-primary .uk-article {
     padding: 40px;
-  }
-}
-.tm-secondary .tm-widget {
-  padding: 20px;
-}
-@media (min-width: 768px) {
-  .tm-secondary .tm-widget {
-    padding: 30px;
-  }
-}
-article > .tm-article-image:first-child {
-  margin-top: -30px;
-  margin-left: -30px;
-  margin-right: -30px;
-}
-@media (min-width: 768px) {
-  article > .tm-article-image:first-child {
-    margin-top: -40px;
-    margin-left: -40px;
-    margin-right: -40px;
   }
 }
 .tm-article-image {
@@ -10848,11 +9422,21 @@ article > .tm-article-image:first-child {
 }
 .ehc-pre-footer-area {
   margin: 10px 0 40px;
-  padding: 80px 0;
+  padding: 180px 0;
 }
-/*--------------------------------------------------------------
-footer
---------------------------------------------------------------*/
+.ehc-pre-footer-area h2 {
+  padding: 10px 60px;
+}
+@media (min-width: 768px) {
+  img.alignright {
+    float: none;
+    width: 100%;
+  }
+}
+.tm-footer-wrapper {
+  background: #2B2C2D;
+  padding-top: 40px;
+}
 .tm-footer {
   color: #fff;
   padding: 25px;
@@ -10906,5 +9490,8 @@ h3.facebook {
 }
 #cff .cff-item {
   border-bottom: none !important;
+}
+h3.fpw-page-title {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
