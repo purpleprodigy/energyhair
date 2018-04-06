@@ -9428,6 +9428,12 @@ content
   padding: 10px 60px;
 }
 @media (max-width: 768px) {
+  .ehc-pre-footer-area h2 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}
+@media (max-width: 768px) {
   img.alignright,
   img.alignleft {
     float: none;
